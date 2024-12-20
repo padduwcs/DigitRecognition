@@ -59,9 +59,9 @@ def graph_test_accuracy(joint_test, nearest_labels_lst, k_range):
 
     for method, accuracies in accuracies_all:
         if method == 0:
-            plt.plot(k_range, accuracies, label="Flat", color="green")
+            plt.plot(k_range, accuracies, label="Vectorize", color="green")
         elif method == 1:
-            plt.plot(k_range, accuracies, label="Chunk", color="blue")
+            plt.plot(k_range, accuracies, label="Sampling", color="blue")
         elif method == 2:
             plt.plot(k_range, accuracies, label="Histogram", color="red")
 
@@ -72,7 +72,6 @@ def graph_test_accuracy(joint_test, nearest_labels_lst, k_range):
     plt.xlabel("K (Number of neighbors)")
     plt.grid()
     plt.legend(loc='lower right')
-    plt.savefig("accuracy.png")
     plt.show()
 
 def table_accuracy_with_methods(joint_test, nearest_labels_lst, k_range):

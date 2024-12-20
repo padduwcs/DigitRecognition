@@ -7,8 +7,8 @@ import numpy as np
 
 k_values = [3,6,24]
 extract_methods = {
-    0: "FLAT",
-    1: "CHUNK",
+    0: "VECTORIZE",
+    1: "SAMPLING",
     2: "HISTOGRAM"
 }
 
